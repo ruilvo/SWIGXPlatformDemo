@@ -1,4 +1,5 @@
 ﻿using System;
+using AmazingCounterLib;
 
 namespace SWIGXPlatformDemoExample
 {

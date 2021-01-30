@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace AmazingCounterLib {
 
 public class AmazingCounter : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -36,19 +37,21 @@ public class AmazingCounter : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          amazing_counterPINVOKE.delete_AmazingCounter(swigCPtr);
+          amazing_counterPINVOKE.delete_AmazingCounterLib_AmazingCounter(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public AmazingCounter() : this(amazing_counterPINVOKE.new_AmazingCounter(), true) {
+  public AmazingCounter() : this(amazing_counterPINVOKE.new_AmazingCounterLib_AmazingCounter(), true) {
   }
 
   public uint tick() {
-    uint ret = amazing_counterPINVOKE.AmazingCounter_tick(swigCPtr);
+    uint ret = amazing_counterPINVOKE.AmazingCounterLib_AmazingCounter_tick(swigCPtr);
     return ret;
   }
+
+}
 
 }

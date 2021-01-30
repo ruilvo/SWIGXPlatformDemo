@@ -192,12 +192,12 @@ class amazing_counterPINVOKE {
   }
 
 
-  [global::System.Runtime.InteropServices.DllImport("amazing_counter_cs", EntryPoint="CSharp_new_AmazingCounter")]
-  public static extern global::System.IntPtr new_AmazingCounter();
+  [global::System.Runtime.InteropServices.DllImport("amazing_counter_cs", EntryPoint="CSharp_new_AmazingCounterLib_AmazingCounter")]
+  public static extern global::System.IntPtr new_AmazingCounterLib_AmazingCounter();
 
-  [global::System.Runtime.InteropServices.DllImport("amazing_counter_cs", EntryPoint="CSharp_AmazingCounter_tick")]
-  public static extern uint AmazingCounter_tick(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("amazing_counter_cs", EntryPoint="CSharp_AmazingCounterLib_AmazingCounter_tick")]
+  public static extern uint AmazingCounterLib_AmazingCounter_tick(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("amazing_counter_cs", EntryPoint="CSharp_delete_AmazingCounter")]
-  public static extern void delete_AmazingCounter(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("amazing_counter_cs", EntryPoint="CSharp_delete_AmazingCounterLib_AmazingCounter")]
+  public static extern void delete_AmazingCounterLib_AmazingCounter(global::System.Runtime.InteropServices.HandleRef jarg1);
 }
