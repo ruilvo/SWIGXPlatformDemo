@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<!--Each item must be copied whenever building on the platform or when publishing for the platform but not when publishing for the other platforms-->
+	<ItemGroup>
+		<ContentWithTargetPath Include="native\win-x64\amazing_counter.dll" Condition="('$(RuntimeIdentifier)' == 'win-x64' Or '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))') And '$(RuntimeIdentifier)' != 'linux-x64' And '$(RuntimeIdentifier)' != 'osx-x64'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>amazing_counter.dll</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="native\win-x64\amazing_counter_cs.dll" Condition="('$(RuntimeIdentifier)' == 'win-x64' Or '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))') And '$(RuntimeIdentifier)' != 'linux-x64' And '$(RuntimeIdentifier)' != 'osx-x64'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>amazing_counter_cs.dll</TargetPath>
+		</ContentWithTargetPath>
+	</ItemGroup>
+
+</Project>
